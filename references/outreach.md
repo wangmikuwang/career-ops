@@ -160,4 +160,4 @@ Before delivering outreach messages:
 - [ ] Ends with a specific, low-effort ask
 - [ ] Could not be sent to anyone else without rewriting
 - [ ] Matches the relationship stage (cold vs warm vs referral)
-- [ ] Passes anti-slop scoring rubric (35/50 minimum)
+- [ ] Passes the anti-slop checks (anti-slop.md)

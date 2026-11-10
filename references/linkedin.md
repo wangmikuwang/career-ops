@@ -204,4 +204,4 @@ Before delivering LinkedIn optimization:
 - [ ] Content recommendations match user's comfort level
 - [ ] Connection request templates avoid sales language trigger words
 - [ ] Photo recommendation included (highest-ROI element)
-- [ ] Passes anti-slop scoring rubric (35/50 minimum)
+- [ ] Passes the anti-slop checks (anti-slop.md)

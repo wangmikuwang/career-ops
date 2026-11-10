@@ -42,6 +42,8 @@ Forget everything you've heard about keyword stuffing. It's wrong.
 | Chronological format preferred by both ATS and humans | T2 |
 | Functional resumes are highly vulnerable to ATS rejection | T3 |
 
+> **Local note:** the two "T1" rows above rest on open-source ATS code. That shows semantic matching exists, not that Workday, Taleo, 北森 or Moka rank candidates this way; their scoring is not public. Treat the practical advice below (mirror the JD's wording where true, don't stuff) as sound, and the mechanism as unconfirmed. The format table and vendor facts are US-specific; for China see `china.md`.
+
 ### Semantic Alignment (Not Keyword Stuffing)
 
 Modern ATS understands that "managed a team" and "led a team" mean the same thing. Instead of repeating exact keywords, align your language semantically with the job description:
@@ -158,4 +160,4 @@ Before delivering a resume:
 - [ ] Format matches target (.docx for enterprise ATS, PDF for modern/SMB)
 - [ ] Length matches experience level
 - [ ] Career gaps addressed directly (never hidden with functional format)
-- [ ] Passes anti-slop scoring rubric (35/50 minimum)
+- [ ] Passes the anti-slop checks (anti-slop.md)

@@ -1,5 +1,7 @@
 # Market Data Reference
 
+> **Scope (local note):** everything in this file is United States data, collected around Q4 2025 – early 2026, mostly T2 vendor surveys. It does not describe China or any other market, and it ages: after early 2027 cite it as "as of 2025–2026". For current or non-US figures, use `research-scout.md`.
+
 Verified labor market data for calibrating job search expectations and salary research. Every statistic is tagged by trust tier. Load this file when users ask about market conditions, salary ranges, industry trends, or remote work.
 
 ## Required Inputs

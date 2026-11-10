@@ -185,4 +185,4 @@ Before delivering career strategy:
 - [ ] Long-term framing goes beyond "get the next job"
 - [ ] Accomplishment mining has been done (not skipped for speed)
 - [ ] Specific next steps are defined, not vague aspirations
-- [ ] Passes anti-slop scoring rubric (35/50 minimum)
+- [ ] Passes the anti-slop checks (anti-slop.md)

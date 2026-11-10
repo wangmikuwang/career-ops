@@ -191,4 +191,4 @@ Before delivering interview prep:
 - [ ] Candidate questions reference specific company details
 - [ ] AI interview guidance included if format is known/suspected
 - [ ] Follow-up guidance is honest about limits (no causal evidence)
-- [ ] All prep materials pass anti-slop scoring (35/50 minimum)
+- [ ] All prep materials pass the anti-slop checks (anti-slop.md)

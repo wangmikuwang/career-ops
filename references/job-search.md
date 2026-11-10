@@ -167,4 +167,4 @@ Before delivering job search strategy:
 - [ ] Industry-specific advice matches their sector (trades ≠ tech ≠ government)
 - [ ] Remote work competition caveat included if targeting remote
 - [ ] Reassessment triggers are shared so they know when to pivot
-- [ ] Passes anti-slop scoring rubric (35/50 minimum)
+- [ ] Passes the anti-slop checks (anti-slop.md)

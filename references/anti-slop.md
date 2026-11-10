@@ -1,6 +1,6 @@
 # Anti-Slop Reference
 
-AI tell removal adapted for career materials. This file defines what makes writing detectable as AI-generated and how to fix it. Every output from this skill must pass the scoring rubric below before delivery.
+AI tell removal adapted for career materials. This file defines what makes writing detectable as AI-generated and how to fix it. Every output from this skill must pass the checks below before delivery.
 
 ## Required Inputs
 
@@ -102,41 +102,48 @@ The story doesn't need to be dramatic. It needs to be *theirs*.
 
 ---
 
-## Scoring Rubric
+## 中文套话表
 
-Rate every output on 5 dimensions. Each dimension is scored 1-10.
+The lists above are English. For Chinese materials, these are the equivalents: words that say nothing a reader can check, and that every AI-written Chinese resume shares.
 
-### 1. Directness (1-10)
-Does the text open with the point? Or does it warm up with "In today's..." or "As a..."?
-- 1-3: Throat-clearing opener, buried lede
-- 4-6: Gets to the point within 2 sentences
-- 7-10: Opens with the strongest claim or most relevant fact
+### 空话动词与名词
+赋能、抓手、闭环、沉淀、打通、拉通、对齐、颗粒度、组合拳、方法论、底层逻辑、顶层设计、链路、心智、生态、矩阵、势能、深耕、聚焦、助力、驱动、夯实、全方位、多维度、端到端、从 0 到 1（没有说明 0 是什么、1 是什么时）
 
-### 2. Rhythm (1-10)
-Do sentence lengths vary naturally? Human writing alternates. AI writing homogenizes.
-- 1-3: Three or more consecutive sentences of similar length
-- 4-6: Some variation, but predictable pattern
-- 7-10: Natural variation — short punches mixed with longer explanations
+### 自我评价
+具有较强的沟通能力 / 学习能力 / 抗压能力、责任心强、吃苦耐劳、团队合作精神、对数据敏感、有 owner 意识、自驱力强、热爱互联网行业
 
-### 3. Trust (1-10)
-Are claims specific enough to verify?
-- 1-3: Generic claims ("improved efficiency," "drove results")
-- 4-6: Category-specific but not verifiable ("improved retail operations")
-- 7-10: Granular and verifiable ("reduced shrinkage from 2.1% to 0.8% in Q3")
+### 句式
+- "负责……，推动……，实现……" 三段式连用，每条 bullet 都一样长
+- "通过……，使……提升了 X%" 全篇同构
+- "在……的背景下" / "随着……的发展" 开头
+- "不仅……更……"、"既……又……" 这类对仗
+- 打招呼语里的 "您好，我对贵公司的××岗位非常感兴趣"
 
-### 4. Authenticity (1-10)
-Does it sound like a person wrote it? Or a template?
-- 1-3: Could apply to anyone in the industry
-- 4-6: Shows domain knowledge but no personal voice
-- 7-10: Contains at least one detail only this person would know
+替换方法和英文一样：换成做了什么、对谁、用什么、数字从多少到多少。"负责用户增长，通过精细化运营实现 DAU 提升" 是空的；"把新用户次日推送从统一文案改成按注册渠道分 4 版，次留从 31% 到 36%（两周 A/B，各 2 万人）" 才能被核实。例子里的数字只是示范格式，实际数字只能来自用户。
 
-### 5. Density (1-10)
-Is every sentence load-bearing? Or is there filler?
-- 1-3: More than 30% of sentences could be deleted without losing meaning
-- 4-6: Mostly substantive, a few filler phrases
-- 7-10: Every sentence carries information or advances the narrative
+---
 
-**Minimum passing score: 35/50.** Below that, rewrite before delivering.
+## Checks
+
+No numeric self-score. A writer grading its own draft passes every time, so the old 35/50 rubric measured nothing. Run these as pass/fail and fix every failure before delivering.
+
+### 1. Phone-call test
+For each achievement: could a stranger verify it with one phone call? "Improved efficiency" fails. "Reduced shrinkage from 2.1% to 0.8% in Q3" passes. If it fails, ask the user for the real detail. If they have none, leave the line plain or cut it. Never invent the detail.
+
+### 2. Swap test
+Swap in another company's or person's name. If the text still works, it fails.
+
+### 3. Banned phrases
+None from the English lists or the 中文套话表 above.
+
+### 4. Deletion test
+Delete each sentence in turn. Any the reader would not miss is filler; remove it.
+
+### 5. Sameness
+Bullets must not all share one length or one skeleton. The opening line states the point, not a windup.
+
+### 6. Their words
+Where the user described something in their own words, the draft keeps their vocabulary. Don't upgrade "搭了个表" to "构建数据看板体系".
 
 ---
 

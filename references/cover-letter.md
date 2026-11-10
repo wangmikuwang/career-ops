@@ -107,7 +107,7 @@ Direct and specific. "I'd welcome the chance to discuss how [specific thing you'
 2. Inject one verifiable story (the one short story principle)
 3. Vary sentence length — human writing has rhythm, AI writing homogenizes
 4. Preserve the user's natural voice (especially for ESL speakers)
-5. Score against anti-slop.md rubric before delivering (35/50 minimum)
+5. Run the anti-slop.md checks before delivering
 
 ---
 
@@ -132,4 +132,4 @@ Before delivering a cover letter:
 - [ ] Company name cannot be swapped out without rewriting
 - [ ] No banned phrases from anti-slop.md
 - [ ] ESL speakers' natural voice is preserved
-- [ ] Passes anti-slop scoring rubric (35/50 minimum)
+- [ ] Passes the anti-slop checks (anti-slop.md)

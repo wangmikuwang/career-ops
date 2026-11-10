@@ -1,76 +1,67 @@
 # Research Scout Reference
 
-Live web research protocol with verification safeguards. Load this file when the user needs information beyond the knowledge base — specific company data, uncovered industries, niche salary figures, or non-US market conditions.
+Live web research protocol. Load this file when the user needs information the reference files don't hold or hold only as a stale US snapshot: specific company data, uncovered industries, salary figures, current market conditions, or anything outside the United States.
 
 ## Activation Triggers
 
-Load this file when the user asks about:
 - **Specific company research**: culture, recent news, team structure, hiring patterns for a named employer
-- **Uncovered industries**: sectors not represented in the knowledge base (e.g., mining, agriculture, maritime)
-- **Niche salary data**: compensation for roles, locations, or seniority levels not in market-data.md
-- **Non-US markets**: hiring norms, labor laws, or platform usage outside the United States
+- **Salary data**: any role, location, or seniority. The reference files hold no salary figures.
+- **Current market conditions**: the tables in market-data.md are a US snapshot from around early 2026
+- **Non-US markets**: for China, read `china.md` first for where to look
+- **Uncovered industries**: sectors the reference files don't mention
 
-If the request can be fully answered from the existing knowledge base, do not activate this protocol — use the verified data instead.
+Stable material (frameworks, principles, how to structure an answer) needs no search.
 
 ---
 
-## 5-Step Search Protocol
+## Search Protocol
 
 ### Step 1 — Search with Specificity
 
 Never search for broad topics. Construct narrow, specific queries.
 
 - **Wrong**: "software engineer salary"
-- **Right**: "senior backend engineer salary Berlin 2025 Glassdoor OR Levels.fyi"
-- **Wrong**: "company culture"
-- **Right**: "[Company Name] engineering team Glassdoor reviews 2024 2025"
+- **Right**: "senior backend engineer salary Berlin 2026 Levels.fyi"
+- **Wrong**: "产品经理 薪资"
+- **Right**: "[公司名] 产品经理 [职级] 总包 2026 OfferShow"
 
 Use at least two different queries per topic to reduce single-source risk.
 
 ### Step 2 — Evaluate Source Quality
 
-Rank every result before using it:
-
 | Source type | Trust level | Example |
 |-------------|-------------|---------|
-| Named organization with published methodology | High | BLS, Glassdoor Economic Research, LinkedIn Economic Graph |
-| Industry publication with editorial oversight | Medium-high | TechCrunch, Harvard Business Review, industry trade journals |
-| Named expert blog with credentials | Medium | Individual practitioners with verifiable experience |
-| Single blog post, no methodology | Low | Personal blogs, Medium posts without citations |
-| User-generated content, forums, anonymous posts | Very low | Reddit threads, Quora answers, anonymous Glassdoor reviews |
+| Named organization with published methodology | High | 国家统计局, BLS, a company's own filings or careers page |
+| Publication with editorial oversight | Medium-high | Established business and trade press |
+| Named practitioner with verifiable experience | Medium | Signed posts by people who hold or held the role |
+| Self-reported aggregates | Low-medium | OfferShow, Levels.fyi, Glassdoor, 看准网. Useful, but report sample size and date |
+| Anonymous posts and forums | Low | 脉脉职言, 牛客 threads, 小红书, Reddit. Leads to check, not facts |
 
-**Rule**: Named organization with methodology > single expert blog > user-generated content. Discard anything without an identifiable source.
+Discard anything without an identifiable source. Several anonymous posts repeating one claim are still one unverified claim.
 
-### Step 3 — Cross-Reference Against Knowledge Base
+### Step 3 — Compare with the Reference Files
 
-Before presenting any finding:
-- Does the knowledge base already have data on this topic? If yes, compare.
-- Does the new finding contradict verified data? If yes, flag the contradiction explicitly.
-- Does the new finding fill a known gap? If yes, note which gap it addresses.
+- For time-sensitive or non-US questions, a recent finding from a named source outranks the reference tables. Those tables are mostly T2 vendor surveys of the US market, frozen at the time the upstream repo was written.
+- If the finding and the table disagree, show both with their dates and say which applies to the user's market.
+- Stable T1 findings (structured interviews predict performance, unexplained gaps cost callbacks) stay the default unless a stronger study contradicts them.
 
-### Step 4 — Present Separately with Tags
+### Step 4 — Present with Source and Date
 
-All web search findings MUST be:
-- Labeled with `[UNVERIFIED — web search]`
-- Presented in a distinct section, never mixed inline with knowledge base data
-- Accompanied by the source name and date
+Every finding from search carries its source name and date, and sample size where the source gives one. Example:
 
-Example format:
 ```
-## From the Knowledge Base (verified)
-Senior software engineers search for a median of 20 weeks [T2].
-
-## From Web Search [UNVERIFIED — web search]
-According to [Source Name] (March 2026), the Berlin market currently shows...
+OfferShow 上该职级近半年有 7 条自报记录（截至 2026-10），总包集中在 A–B 区间。样本很少，只能当参考。
 ```
+
+One claim, one source. Don't merge a reference-table figure and a search figure into a single number.
 
 ### Step 5 — Honest Fallback
 
 If no reliable source is found:
-- Say: "I don't have verified data on that specific topic."
+- Say so: "这个我查不到可靠数据。"
 - Do NOT generate plausible-sounding estimates, averages, or statistics.
-- Suggest what the user could search for themselves and where to look.
-- Offer to proceed with what the knowledge base does have.
+- Say where the user could look, including sources behind a login you can't read (脉脉, OfferShow 小程序, 内部朋友).
+- Offer to proceed with what is known.
 
 ---
 
@@ -78,30 +69,20 @@ If no reliable source is found:
 
 | Age of data | Action |
 |-------------|--------|
-| Within 12 months | Current — use freely with `[UNVERIFIED — web search]` tag |
+| Within 12 months | Current. Use with source and date |
 | 1-3 years old | Use with caveat: "as of [year]" |
 | Older than 3 years | Discard for market data, salary, and trend claims |
 | Any age | Acceptable for stable facts (company founding date, methodology descriptions) |
+
+The same rule applies to the reference files themselves: their market tables pass the 12-month mark in early 2027 and should be treated as "as of 2025–2026" after that.
 
 ---
 
 ## Quality Checklist
 
-Before presenting web research findings:
-- [ ] Every finding is tagged `[UNVERIFIED — web search]`
-- [ ] Source name and date are included for each finding
-- [ ] Source quality has been evaluated (Step 2 ranking applied)
-- [ ] Findings are presented separately from knowledge base data
-- [ ] No plausible-sounding statistics have been generated
-- [ ] Contradictions with the knowledge base are flagged
-- [ ] Recency rules have been applied
-- [ ] The user can distinguish what is verified research vs live search
-
----
-
-## Explicit Prohibitions
-
-1. **Never generate statistics.** If you cannot find a number from a credible source, you do not have that number. Do not estimate, extrapolate, or produce "typical" figures.
-2. **Never present web search findings as if they were part of the knowledge base.** The trust tier system (T1-T4) applies only to the researched knowledge base. Web search results are untiered until verified.
-3. **Never blend sources.** A sentence should come from one source. Do not combine a knowledge base figure with a web search figure in the same claim.
-4. **Never omit the tag.** Even if you are confident in the source, the `[UNVERIFIED — web search]` tag is mandatory. The user decides what to trust.
+- [ ] Every finding has a source name and date
+- [ ] Self-reported and anonymous sources are labelled as such, with sample size
+- [ ] No statistic was generated, estimated, or extrapolated
+- [ ] Disagreements with the reference tables are shown, not silently resolved
+- [ ] Recency rules applied
+- [ ] US data is never presented as describing another market
